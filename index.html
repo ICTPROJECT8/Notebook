@@ -1,0 +1,49 @@
+</div>
+
+<div class="filter-box">
+  <select id="category-filter">
+    <option value="All">All Categories</option>
+    <option value="General">General</option>
+    <option value="Work">Work</option>
+    <option value="Personal">Personal</option>
+    <option value="Ideas">Ideas</option>
+  </select>
+</div>
+
+<div id="notes-list" class="notes-list">
+  <!-- Dynamic note list items rendered by JavaScript -->
+</div>
+</aside>
+
+<!-- Main Editor Area -->
+<main class="editor-container">
+<div id="editor-view" class="editor-view">
+  <div class="editor-header">
+    <input type="text" id="note-title" placeholder="Note Title..." autocomplete="off">
+    
+    <div class="editor-meta">
+      <select id="note-category">
+        <option value="General">General</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Ideas">Ideas</option>
+      </select>
+      
+      <span id="save-status" class="save-status">Saved</span>
+      <button id="delete-note-btn" class="btn danger-btn">Delete</button>
+    </div>
+  </div>
+
+  <textarea id="note-body" placeholder="Start typing your note here..."></textarea>
+</div>
+
+<!-- Empty State View -->
+<div id="empty-state" class="empty-state hidden">
+  <p>No note selected. Select a note from the sidebar or create a new one!</p>
+</div>
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
