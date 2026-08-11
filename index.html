@@ -1,49 +1,157 @@
-</div>
+<!DOCTYPE html>
 
-<div class="filter-box">
-  <select id="category-filter">
-    <option value="All">All Categories</option>
-    <option value="General">General</option>
-    <option value="Work">Work</option>
-    <option value="Personal">Personal</option>
-    <option value="Ideas">Ideas</option>
-  </select>
-</div>
+<html lang="en">
 
-<div id="notes-list" class="notes-list">
-  <!-- Dynamic note list items rendered by JavaScript -->
-</div>
-</aside>
+<head>
 
-<!-- Main Editor Area -->
-<main class="editor-container">
-<div id="editor-view" class="editor-view">
-  <div class="editor-header">
-    <input type="text" id="note-title" placeholder="Note Title..." autocomplete="off">
-    
-    <div class="editor-meta">
-      <select id="note-category">
-        <option value="General">General</option>
-        <option value="Work">Work</option>
-        <option value="Personal">Personal</option>
-        <option value="Ideas">Ideas</option>
-      </select>
-      
-      <span id="save-status" class="save-status">Saved</span>
-      <button id="delete-note-btn" class="btn danger-btn">Delete</button>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Notes Application</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <header>
+
+            <h1>📒 My Digital Notes</h1>
+
+            <p>Write, edit, organize and manage your personal notes.</p>
+
+            <button id="newNoteBtn">
+
+                + New Note
+
+            </button>
+
+        </header>
+
+        <!-- Search -->
+
+        <section class="search-section">
+
+            <input
+
+                type="text"
+
+                id="searchInput"
+
+                placeholder="🔍 Search notes by title or keyword..."
+
+            >
+
+        </section>
+
+        <!-- Note Editor -->
+
+        <section id="noteEditor" class="editor hidden">
+
+            <h2 id="editorHeading">
+
+                Create New Note
+
+            </h2>
+
+            <label for="noteTitle">
+
+                Note Title
+
+            </label>
+
+            <input
+
+                type="text"
+
+                id="noteTitle"
+
+                placeholder="Enter note title"
+
+            >
+
+            <label for="noteContent">
+
+                Note Content
+
+            </label>
+
+            <textarea
+
+                id="noteContent"
+
+                placeholder="Write your note here..."
+
+            ></textarea>
+
+            <div class="editor-buttons">
+
+                <button id="saveBtn" class="save-btn">
+
+                    💾 Save Note
+
+                </button>
+
+                <button id="cancelBtn" class="cancel-btn">
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+            <p id="errorMessage"></p>
+
+        </section>
+
+        <!-- Saved Notes -->
+
+        <section class="saved-section">
+
+            <div class="section-header">
+
+                <h2>Saved Notes</h2>
+
+                <span id="noteCount">
+
+                    0 notes
+
+                </span>
+
+            </div>
+
+            <!-- Notes will appear here -->
+
+            <div id="notesContainer"></div>
+
+            <!-- Empty message -->
+
+            <div id="emptyMessage" class="empty-message">
+
+                <div>📝</div>
+
+                <h3>No notes yet</h3>
+
+                <p>
+
+                    Click "New Note" to create your first note.
+
+                </p>
+
+            </div>
+
+        </section>
+
     </div>
-  </div>
 
-  <textarea id="note-body" placeholder="Start typing your note here..."></textarea>
-</div>
+    <script src="script.js"></script>
 
-<!-- Empty State View -->
-<div id="empty-state" class="empty-state hidden">
-  <p>No note selected. Select a note from the sidebar or create a new one!</p>
-</div>
-</main>
-</div>
-
-<script src="script.js"></script>
 </body>
+
 </html>
